@@ -1,0 +1,12 @@
+{
+    "linkedInProfile": {
+        "userName": "Tymoteusz",
+        "userDescription": "\n          Software Engineer\n        ",
+        "aboutDescripton": "",
+        "experience": [
+            "\n  Front-End Engineer  \n HashLeap · Part-time \n Aug 2023 - Present · 2 mos \n London, England, United Kingdom · Remote \n Skills: Next.js · TypeScript · Prisma ORM \n",
+            "\n  Software Engineer \n Flowbird Group · Full-time \n Jun 2022 - Mar 2023 · 10 mos \n Poole, England, United Kingdom · Hybrid \n Skills: Java · Jenkins · SQL · Python (Programming Language) · C# · .NET Framework \n",
+            "\n  University of Bristol \n Contract · 2 yrs 2 mos \n Bristol, England, United Kingdom \n Graduate Teacher Level 1 \n Sep 2021 - Oct 2022 · 1 yr 2 mos \n Demonstrator \n Sep 2020 - Sep 2021 · 1 yr 1 mo \n"
+        ]
+    }
+}
