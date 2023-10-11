@@ -24,14 +24,14 @@ def messageGenerator(prompt):
     for profile in stringified_profiles:
 
         one = queryGPT.queryGPT(prompt, profile)
-        two = queryGPT.queryGPT(prompt, profile)
-        three = queryGPT.queryGPT(prompt, profile)
+        # two = queryGPT.queryGPT(prompt, profile)
+        # three = queryGPT.queryGPT(prompt, profile)
 
-        row = [profile, one, two, three]
+        # row = [profile, one, two, three]
 
-        outputArray.append(one)
-        outputArray.append(two)
-        outputArray.append(three)
+        outputArray.append([0, one])
+        # outputArray.append(two)
+        # outputArray.append(three)
 
 
         print("profile appended")

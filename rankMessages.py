@@ -25,17 +25,24 @@ def rankMessages(array):
 
     # array = readCSV.readCSV("output.csv")
 
-    scoresArray = []
+    scoresArray = []  # Initialize an empty list to store scores
 
-    for x in array:
-        
-        scoresArray.append(int(queryGPT.queryGPT4(prompt, x[1])))
-        scoresArray.append(int(queryGPT.queryGPT4(prompt, x[2])))
-        scoresArray.append(int(queryGPT.queryGPT4(prompt, x[3])))
+    for x in array:  # Iterate over each element in the input array
+        try: 
+            # Query GPT-4 with the prompt and the current element, convert the result to int and append to scoresArray
+            scoresArray.append(int(queryGPT.queryGPT4(prompt, x)))
 
+        except:
+            # If an error occurs, print the error message and the element causing the error
+            print("Error appending array:")
+            print(x)
+
+    # Print the scoresArray after all elements have been processed
     print(scoresArray)
 
-    def mean(numbers):
-        return sum(numbers) / len(numbers)
+    def mean(numbers):  # Define a function to calculate the mean of a list of numbers
+        return sum(numbers) / len(numbers)  # Return the mean of the numbers
 
+    # Return the mean of the scoresArray
     return(mean(scoresArray))
+

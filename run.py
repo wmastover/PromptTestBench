@@ -2,16 +2,17 @@ from runMessageGenerator import messageGenerator
 from rankMessages import rankMessages
 from functions import queryGPT
 
-initialPrompt = """
-Generate a highly personalized message based on the following LinkedIn profile
-"""
+initialPrompt = f"""Create a succinct, personalized one-liner for the following LinkedIn user, using their profile information. The message should be a very short sentence and start with 'Hey **name**!'. Please reference a single detail from their profile information. Avoid controversial subjects and questions. Make sure to reference or comment on profile information, not just parrot it back. The reply should not contain any information about the sender.
+  \n\n
+  Above all the reply should make sense, read well and be as succinct as possible."""
 
 count = 0
 
 currentPrompt = initialPrompt
 messageArray = messageGenerator(currentPrompt)
+print(messageArray)
 currentPromptRank = rankMessages(messageArray)
-
+print(currentPromptRank)
 while count < 10:
     print("Iteration:", count + 1)
 
@@ -23,8 +24,8 @@ while count < 10:
     print("Object:")
     print(object)
 
-    prompt1 = object.OutputPromptOne
-    prompt2 = object.OutputPromptTwo
+    prompt1 = object["OutputPromptOne"]
+    prompt2 = object["OutputPromptTwo"]
 
     messageArray1 = messageGenerator(prompt1)
     promptRank1 = rankMessages(messageArray1)
